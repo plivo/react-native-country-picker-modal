@@ -11,6 +11,7 @@ import {
   View,
   ActivityIndicator,
 } from 'react-native'
+import flags from './Flags'
 
 const styles = StyleSheet.create({
   container: {
@@ -43,11 +44,11 @@ interface FlagType {
 }
 
 const ImageFlag = memo(({ countryCode, flagSize }: FlagType) => {
-  const { getImageFlagAsync } = useContext()
-  const asyncResult = useAsync(getImageFlagAsync, [countryCode])
-  if (asyncResult.loading) {
-    return <ActivityIndicator size={'small'} />
-  }
+  // const { getImageFlagAsync } = useContext()
+  // const asyncResult = useAsync(getImageFlagAsync, [countryCode])
+  // if (asyncResult.loading) {
+  //   return <ActivityIndicator size={'small'} />
+  // }
   return (
     <Image
       resizeMode={'contain'}
@@ -55,7 +56,7 @@ const ImageFlag = memo(({ countryCode, flagSize }: FlagType) => {
         styles.imageFlag,
         { borderColor: 'transparent', height: flagSize },
       ]}
-      source={asyncResult.result}
+      source={flags[countryCode]}
     />
   )
 })
