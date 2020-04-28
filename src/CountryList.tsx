@@ -88,7 +88,7 @@ interface CountryItemProps {
   withEmoji?: boolean
   withCallingCode?: boolean
   withCurrency?: boolean
-  fontSyle: object
+  fontStyle: object
   onSelect(country: Country): void
 }
 const CountryItem = (props: CountryItemProps) => {
@@ -100,7 +100,7 @@ const CountryItem = (props: CountryItemProps) => {
     withEmoji,
     withCallingCode,
     withCurrency,
-    fontSyle,
+    fontStyle,
   } = props
   const extraContent: string[] = []
   if (
@@ -131,7 +131,7 @@ const CountryItem = (props: CountryItemProps) => {
             allowFontScaling={false}
             numberOfLines={2}
             ellipsizeMode='tail'
-            fontSyle={fontSyle}
+            fontStyle={fontStyle}
           >
             {country.name}
             {extraContent.length > 0 && ` (${extraContent.join(', ')})`}
@@ -162,7 +162,7 @@ interface CountryListProps {
   withAlphaFilter?: boolean
   withCallingCode?: boolean
   withCurrency?: boolean
-  fontSyle: object
+  fontStyle: object
   flatListProps?: FlatListProps<Country>
   onSelect(country: Country): void
 }
@@ -190,7 +190,7 @@ export const CountryList = (props: CountryListProps) => {
     filter,
     flatListProps,
     filterFocus,
-    fontSyle,
+    fontStyle,
   } = props
 
   const flatListRef = useRef<FlatList<Country>>(null)
@@ -246,7 +246,7 @@ export const CountryList = (props: CountryListProps) => {
           withCallingCode,
           withCurrency,
           onSelect,
-          fontSyle,
+          fontStyle,
         })}
         {...{
           data: search(filter, data),

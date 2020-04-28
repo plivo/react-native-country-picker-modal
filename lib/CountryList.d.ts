@@ -9,7 +9,7 @@ interface CountryListProps {
     withAlphaFilter?: boolean;
     withCallingCode?: boolean;
     withCurrency?: boolean;
-    fontSyle: object;
+    fontStyle: object;
     flatListProps?: FlatListProps<Country>;
     onSelect(country: Country): void;
 }
