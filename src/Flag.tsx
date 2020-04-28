@@ -55,7 +55,7 @@ const ImageFlag = memo(({ countryCode, flagSize }: FlagType) => {
         styles.imageFlag,
         { borderColor: 'transparent', height: flagSize },
       ]}
-      source={{ uri: asyncResult.result }}
+      source={asyncResult.result}
     />
   )
 })

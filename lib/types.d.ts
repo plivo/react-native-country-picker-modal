@@ -10,7 +10,7 @@ export interface Country {
     subregion: Subregion;
     currency: CurrencyCode[];
     callingCode: CallingCode[];
-    flag: string;
+    flag: any;
     name: TranslationLanguageCodeMap | string;
     cca2: CountryCode;
 }
