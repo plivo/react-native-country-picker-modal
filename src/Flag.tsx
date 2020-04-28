@@ -49,16 +49,20 @@ const ImageFlag = memo(({ countryCode, flagSize }: FlagType) => {
   // if (asyncResult.loading) {
   //   return <ActivityIndicator size={'small'} />
   // }
-  return (
-    <Image
-      resizeMode={'contain'}
-      style={[
-        styles.imageFlag,
-        { borderColor: 'transparent', height: flagSize },
-      ]}
-      source={flags[countryCode]}
-    />
-  )
+  if (flags[countryCode]) {
+    return (
+      <Image
+        resizeMode={'contain'}
+        style={[
+          styles.imageFlag,
+          { borderColor: 'transparent', height: flagSize },
+        ]}
+        source={flags[countryCode]}
+      />
+    )
+  } else {
+    return <EmojiFlag {...{ countryCode, flagSize }} />
+  }
 })
 
 const EmojiFlag = memo(({ countryCode, flagSize }: FlagType) => {
