@@ -31,6 +31,7 @@ interface CountryPickerProps {
     closeButtonImage?: ImageSourcePropType;
     closeButtonStyle?: StyleProp<ViewStyle>;
     closeButtonImageStyle?: StyleProp<ImageStyle>;
+    fontSyle?: any;
     renderFlagButton?(props: FlagButton['props']): ReactNode;
     renderCountryFilter?(props: CountryFilter['props']): ReactNode;
     onSelect(country: Country): void;

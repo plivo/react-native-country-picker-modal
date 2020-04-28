@@ -68,6 +68,7 @@ interface CountryPickerProps {
   closeButtonImage?: ImageSourcePropType
   closeButtonStyle?: StyleProp<ViewStyle>
   closeButtonImageStyle?: StyleProp<ImageStyle>
+  fontSyle?: any
   renderFlagButton?(props: FlagButton['props']): ReactNode
   renderCountryFilter?(props: CountryFilter['props']): ReactNode
   onSelect(country: Country): void
@@ -108,6 +109,7 @@ export const CountryPicker = (props: CountryPickerProps) => {
     closeButtonImageStyle,
     excludeCountries,
     placeholder,
+    fontSyle,
   } = props
   const [state, setState] = useState<State>({
     visible: props.visible || false,
@@ -212,6 +214,7 @@ export const CountryPicker = (props: CountryPickerProps) => {
             filter,
             filterFocus,
             flatListProps,
+            fontSyle,
           }}
         />
       </CountryModal>
