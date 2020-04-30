@@ -29,10 +29,8 @@ const styles = StyleSheet.create({
   },
   imageFlag: {
     resizeMode: 'contain',
-    width: 25,
-    height: 19,
-    borderWidth: 1 / PixelRatio.get(),
-    opacity: 0.8,
+    width: 28,
+    height: 18,
   },
 })
 
@@ -52,7 +50,6 @@ const ImageFlag = memo(({ countryCode, flagSize }: FlagType) => {
   if (flags[countryCode]) {
     return (
       <Image
-        resizeMode={'contain'}
         style={[
           styles.imageFlag,
           { borderColor: 'transparent', height: flagSize },
