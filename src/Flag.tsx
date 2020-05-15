@@ -52,7 +52,7 @@ const ImageFlag = memo(({ countryCode, flagSize }: FlagType) => {
       <Image
         style={[
           styles.imageFlag,
-          { borderColor: 'transparent', height: flagSize },
+          { borderWidth: 0.5, borderColor: '#e7ecf2', height: flagSize },
         ]}
         source={flags[countryCode]}
       />
