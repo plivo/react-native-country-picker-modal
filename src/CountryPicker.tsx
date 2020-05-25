@@ -64,6 +64,7 @@ interface CountryPickerProps {
   disableNativeModal?: boolean
   visible?: boolean
   placeholder?: string
+  flagHeight?: number
   containerButtonStyle?: StyleProp<ViewStyle>
   closeButtonImage?: ImageSourcePropType
   closeButtonStyle?: StyleProp<ViewStyle>
@@ -110,6 +111,7 @@ export const CountryPicker = (props: CountryPickerProps) => {
     excludeCountries,
     placeholder,
     fontStyle,
+    flagHeight,
   } = props
   const [state, setState] = useState<State>({
     visible: props.visible || false,
@@ -215,6 +217,7 @@ export const CountryPicker = (props: CountryPickerProps) => {
             filterFocus,
             flatListProps,
             fontStyle,
+            flagHeight: flagHeight!,
           }}
         />
       </CountryModal>

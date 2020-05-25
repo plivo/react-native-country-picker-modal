@@ -27,6 +27,7 @@ interface CountryPickerProps {
     disableNativeModal?: boolean;
     visible?: boolean;
     placeholder?: string;
+    flagHeight?: number;
     containerButtonStyle?: StyleProp<ViewStyle>;
     closeButtonImage?: ImageSourcePropType;
     closeButtonStyle?: StyleProp<ViewStyle>;

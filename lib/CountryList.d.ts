@@ -10,6 +10,7 @@ interface CountryListProps {
     withCallingCode?: boolean;
     withCurrency?: boolean;
     fontStyle: object;
+    flagHeight: number;
     flatListProps?: FlatListProps<Country>;
     onSelect(country: Country): void;
 }

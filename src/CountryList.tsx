@@ -89,6 +89,7 @@ interface CountryItemProps {
   withCallingCode?: boolean
   withCurrency?: boolean
   fontStyle: object
+  flagHeight: number
   onSelect(country: Country): void
 }
 const CountryItem = (props: CountryItemProps) => {
@@ -101,6 +102,7 @@ const CountryItem = (props: CountryItemProps) => {
     withCallingCode,
     withCurrency,
     fontStyle,
+    flagHeight,
   } = props
   const extraContent: string[] = []
   if (
@@ -123,7 +125,11 @@ const CountryItem = (props: CountryItemProps) => {
       <View style={[styles.itemCountry, { height: itemHeight }]}>
         {withFlag && (
           <Flag
-            {...{ withEmoji, countryCode: country.cca2, flagSize: flagSize! }}
+            {...{
+              withEmoji,
+              countryCode: country.cca2,
+              flagSize: flagHeight ? flagHeight! : flagSize!,
+            }}
           />
         )}
         <View style={styles.itemCountryName}>
@@ -163,6 +169,7 @@ interface CountryListProps {
   withCallingCode?: boolean
   withCurrency?: boolean
   fontStyle: object
+  flagHeight: number
   flatListProps?: FlatListProps<Country>
   onSelect(country: Country): void
 }
@@ -191,6 +198,7 @@ export const CountryList = (props: CountryListProps) => {
     flatListProps,
     filterFocus,
     fontStyle,
+    flagHeight,
   } = props
 
   const flatListRef = useRef<FlatList<Country>>(null)
@@ -247,6 +255,7 @@ export const CountryList = (props: CountryListProps) => {
           withCurrency,
           onSelect,
           fontStyle,
+          flagHeight,
         })}
         {...{
           data: search(filter, data),
