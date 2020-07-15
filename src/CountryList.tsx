@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    paddingHorizontal: 5,
+    paddingLeft: 32,
   },
   itemCountryName: {
     width: '90%',
