@@ -121,7 +121,6 @@ const CountryItem = (props: CountryItemProps) => {
       testID={`country-selector-${country.cca2}`}
       onPress={() => onSelect(country)}
       {...{ activeOpacity }}
-      style={{ paddingLeft: 32 }}
     >
       <View style={[styles.itemCountry, { height: itemHeight }]}>
         {withFlag && (
