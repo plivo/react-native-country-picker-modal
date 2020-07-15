@@ -54,6 +54,7 @@ const ImageFlag = memo(({ countryCode, flagSize }: FlagType) => {
           {
             borderWidth: 0.5,
             borderColor: '#e7ecf2',
+            resizeMode: 'cover',
             height: flagSize,
             width: flagSize * 1.5,
           },
