@@ -37,11 +37,7 @@ const renderFilter = (
   props.renderCountryFilter ? (
     props.renderCountryFilter(props)
   ) : (
-    <CountryFilter
-      {...props}
-      fontFamily={props.fontStyle.fontFamily}
-      fontSize={props.fontStyle.fontSize}
-    />
+    <CountryFilter {...props} />
   )
 
 interface CountryPickerProps {

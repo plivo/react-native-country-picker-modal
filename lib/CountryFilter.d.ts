@@ -1,6 +1,5 @@
 export interface CountryFilterProps {
-    fontSize: number;
-    fontFamily: string;
+    fontSize: any;
 }
 export declare const CountryFilter: {
     (props: CountryFilterProps): JSX.Element;
